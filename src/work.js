@@ -39,7 +39,7 @@ import Product from './product';
     };
     
 
-    const applyFilter = () => {
+   
   
     const filteredProducts = products.filter(product => {
       return (
@@ -49,8 +49,8 @@ import Product from './product';
         product.rating >= minRating
       );
     })
-    setProducts(filteredProducts);
-    }
+    
+    
     return (
         <div>
         <h2>E-Commerce Product Filters</h2>
@@ -73,17 +73,15 @@ import Product from './product';
         <label htmlFor="minRating">Min Rating:</label>
         <input type="number" id="minRating" min="0" max="5" onChange={handleMinRatingChange} value={minRating} />
       </div>
-      <button onClick = {applyFilter}>
-      Apply Filter
-      </button>
-      {/*<div>
+     
+      <div>
         {filteredProducts.map(product => (
-          <Products key={product.id} name={product.name} />
+          <Product key={product.id} name={product.name} />
         ))}
-      </div>*/}
+      </div>
         </div>
     )
         }
-
+      
 export default Items
 
