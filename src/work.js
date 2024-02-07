@@ -74,8 +74,7 @@ import Product from './product';
         <input type="number" id="minRating" min="0" max="5" onChange={handleMinRatingChange} value={minRating} />
       </div>
 
-      {/*update list*/}
-     <button >Update List</button>
+      
       <div>
         {filteredProducts.map(product => (
           <Product key={product.id} name={product.name} />
